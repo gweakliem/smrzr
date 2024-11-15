@@ -1,0 +1,51 @@
+[project]
+name = "smrzr"
+version = "0.1"
+description = "Summarizes a web page using an LLM"
+readme = "README.md"
+authors = [{name = "Gordon Weakliem"}]
+license = {text = "Apache-2.0"}
+requires-python = ">=3.8"
+classifiers = [
+    "License :: OSI Approved :: Apache Software License"
+]
+dependencies = [
+    "click"
+]
+
+[project.urls]
+Homepage = "https://github.com/gweakliem/smrzr"
+Changelog = "https://github.com/gweakliem/smrzr/releases"
+Issues = "https://github.com/gweakliem/smrzr/issues"
+CI = "https://github.com/gweakliem/smrzr/actions"
+
+[project.entry-points.console_scripts]
+smrzr = "smrzr.cli:cli"
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[tool.poetry]
+name = "smrzr"
+version = "0.1.0"
+description = ""
+authors = ["Gordon Weakliem <gordon@eighty-twenty.net>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+beautifulsoup4 = "^4.12.3"
+click = "^8.1.7"
+anthropic = "^0.18.1"
+requests = "^2.28.1"
+#transformers = "^4.42.3"
+#tensorflow = "^2.16.2"
+#tf-keras = "^2.17.0"
+
+[tool.poetry.scripts]
+smrzr = "smrzr.cli:cli"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
